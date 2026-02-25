@@ -3,6 +3,8 @@
 
 { DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"; source "${DIR}/sane.bash"; }
 
+# COPY-PASTE THE ABOVE TO YOUR BASH SCRIPT, AFTER YOU DOWNLOAD sane.bash
+
 # EXAMPLE SCRIPT
 
 exe "false || true" # allow non-zero exists
