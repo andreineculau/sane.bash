@@ -1,69 +1,23 @@
-# strict.bash
+# sane.bash
 
-For those times when you find yourself old and grumpy, while others reinvent bash debugging...
+For the future you to keep on enjoying GNU Bash.
 
-Have a look at the [./example](./example) for usage and take it for a spin:
+For many decades now,
+we've had [an unofficial Bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/),
+essentially `set -euo pipefail`.
 
-## Output of `./example`:
+Except GNU Bash evolved - `errtrace` `functrace` `inherit_errexit`
+and then there's one last thing (tm): `stack trace on failure`.
 
-```
-$ false || true
-$ false
+`sane.bash` wraps all that up in a script to import (source) or a snippet to copy-paste.
 
---------------------------------------------------------------------------------
-EXIT with 1
-+(/Users/andrei/tmp/strict.bash/strict.bash:15): false
-```
+## Usage
 
-## Output of `./example` when interrupting with `CTRL-C`:
-```
-$ false || true
-^C
---------------------------------------------------------------------------------
-INT with 130
-+(./example:1): main(): sleep 5
+Have a look at the [./example](./example) for usage and docs.
 
---------------------------------------------------------------------------------
-EXIT with 130
-+(./example:1): main(): sleep 5
-```
-
-## Output of `SHELLOPTS=xtrace ./example`:
-
-```
-+(./example:11): main(): exe 'false || true'
-+(/Users/andrei/git/strict.bash/strict.bash:39): exe(): EXE_COMMAND='false || true'
-+(/Users/andrei/git/strict.bash/strict.bash:40): exe(): eval 'echo "$ false || true"; false || true'
-++(/Users/andrei/git/strict.bash/strict.bash:40): exe(): echo '$ false || true'
-$ false || true
-++(/Users/andrei/git/strict.bash/strict.bash:40): exe(): false
-++(/Users/andrei/git/strict.bash/strict.bash:40): exe(): true
-+(/Users/andrei/git/strict.bash/strict.bash:41): exe(): unset EXE_COMMAND
-+(./example:12): main(): false
-+(./example:12): main(): true
-+(./example:14): main(): sleep 5
-+(./example:15): main(): exe false
-+(/Users/andrei/git/strict.bash/strict.bash:39): exe(): EXE_COMMAND=false
-+(/Users/andrei/git/strict.bash/strict.bash:40): exe(): eval 'echo "$ false"; false'
-++(/Users/andrei/git/strict.bash/strict.bash:40): exe(): echo '$ false'
-$ false
-++(/Users/andrei/git/strict.bash/strict.bash:40): exe(): false
-+(/Users/andrei/git/strict.bash/strict.bash:1): exe(): TRAP_SIGNAL=EXIT
-+(/Users/andrei/git/strict.bash/strict.bash:1): exe(): TRAP_CODE=1
-+(/Users/andrei/git/strict.bash/strict.bash:1): exe(): TRAP_LOCATION='+(/Users/andrei/git/strict.bash/strict.bash:1): exe(): '
-+(/Users/andrei/git/strict.bash/strict.bash:1): exe(): TRAP_COMMAND=false
-+(/Users/andrei/git/strict.bash/strict.bash:1): exe(): on_trap
-+(/Users/andrei/git/strict.bash/strict.bash:29): on_trap(): set +x
-
---------------------------------------------------------------------------------
-EXIT with 1
-+(/Users/andrei/git/strict.bash/strict.bash:1): exe(): false
-```
-
-## Output of `SHELLOPTS=xtrace ./example 5>/dev/null`:
-
-Identical with `./example` as `$BASH_XTRACEFD` is set to default to `5`.
+There's also [./example-inline](./example-inline) for those times when
+[a little copying is better than a little dependency.](https://go-proverbs.github.io)
 
 ## License
 
-[Unlicense](LICENSE).
+[Unlicense](LICENSE)
