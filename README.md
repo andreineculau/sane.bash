@@ -3,7 +3,8 @@
 For the future you to keep on enjoying GNU Bash.
 
 For many decades now,
-we've had [an unofficial Bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/),
+we've had [an unofficial Bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+([Reddit](https://www.reddit.com/r/programming/comments/25y6yt/use_the_unofficial_bash_strict_mode_unless_you/)),
 essentially `set -euo pipefail`.
 
 Except GNU Bash evolved - `errtrace` `functrace` `inherit_errexit`
