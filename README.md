@@ -18,6 +18,8 @@ Have a look at the [./example](./example) for usage and docs.
 
 There's also [./example-inline](./example-inline) for those times when
 [a little copying is better than a little dependency.](https://go-proverbs.github.io)
+as well as [./example-inline-full](./example-inline-full) acting as a reference/template
+for the copy-paste approach.
 
 ## License
 
