@@ -23,4 +23,4 @@ for the copy-paste approach.
 
 ## License
 
-[Unlicense](LICENSE)
+[MIT](LICENSE)
