@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # SOURCE sane.bash WITH
-# { DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"; source "${DIR}/strict.bash"; }
+# { DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"; source "${DIR}/sane.bash"; }
 
 # http://linuxcommand.org/lc3_man_pages/seth.html
 set -o errexit   # error exits script
@@ -20,4 +20,4 @@ trap 'e=$?; set +x; s() { local i=0; while caller $i; do ((++i)); done | while r
 function exe() { printf '%s\n' "$(pwd)\$ $(printf '%q ' "$@")" >&2; }; export -f exe
 
 # Enable xtrace if $VERBOSE/$V is non-null
-[ -z "${VERBOSE:-${V:-}}" ] || set -x
+[[ -z "${VERBOSE:-${V:-}}" ]] || set -x
