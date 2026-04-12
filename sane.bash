@@ -9,8 +9,7 @@ set -o nounset   # no unset variables
 set -o pipefail  # failure on any command errors
 set -o errtrace  # shell functions inherit ERR trap
 set -o functrace # shell functions inherit DEBUG trap
-(( BASH_VERSINFO[0] < 4 || (BASH_VERSINFO[0] == 4 && BASH_VERSINFO[1] < 4) )) || shopt -s inherit_errexit
-
+shopt -s inherit_errexit 2>/dev/null || true # inherit errexit
 # xtrace context
 export PS4='+(${BASH_SOURCE[0]}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
