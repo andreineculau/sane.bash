@@ -1,0 +1,10 @@
+{
+  "name": "sane.bash",
+  "version": "0.0.0",
+  "description": "For the future you to keep on enjoying GNU Bash.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andreineculau/sane.bash.git"
+  },
+  "license": "MIT"
+}
