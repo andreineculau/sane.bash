@@ -17,6 +17,7 @@ sleep 5             # try pressing CTRL-C
 exe false           # this should fail and be trapped
 
 # EXAMPLE SCRIPT OUTPUT
+# editorconfig-checker-disable max-line-length
 
 # ## `./example`
 
