@@ -14,7 +14,7 @@ and then there's one last thing (tm): `stack trace on failure`.
 with inline documentation.
 
 [reference-sane.bash](./reference-sane.bash) is the same code,
-minus the documentation, compact, adding argument parsing,
+minus the documentation, compact, adding argument parsing,\
 acting as a full reference/template for a copy-paste approach instead of sourcing.
 
 ## Usage
