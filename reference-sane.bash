@@ -8,8 +8,8 @@ trap 'e=$?; set +x; s() { local i=0; while caller $i; do ((++i)); done | while r
 function exe() { printf '%s\n' "$(pwd)\$ $(printf '%q ' "$@")" >&2; "$@"; }; export -f exe
 [[ -z "${VERBOSE:-${V:-}}" ]] || set -x
 
-#- example-inline-full 1.0
-## Usage: example-inline-full
+#- reference-sane.bash 1.0
+## Usage: reference-sane.bash
 ## Description placeholder
 ##
 ##   -h, --help     Display this help and exit
