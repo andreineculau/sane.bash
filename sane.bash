@@ -13,6 +13,7 @@ shopt -s inherit_errexit 2>/dev/null || true # inherit errexit
 # xtrace context
 export PS4='+(${BASH_SOURCE[0]}:${LINENO}): ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 
+# Show stack trace on error
 # shellcheck disable=SC2034,SC2154
 trap 'e=$?; set +x; s() { local i=0; while caller $i; do ((++i)); done | while read l f p; do echo "bash: *** [$p:$l $f]${e:+ Error }$e"; e=""; done; }; >&2 echo; >&2 s' ERR # editorconfig-checker-disable-line
 
