@@ -11,10 +11,11 @@ Except GNU Bash evolved - `errtrace` `functrace` `inherit_errexit`
 and then there's one last thing (tm): `stack trace on failure`.
 
 [sane.bash](./sane.bash) wraps all that up in a script to import (source)
-or a snippet to copy-paste.
+with inline documentation.
 
-[reference-sane.bash](./reference-sane.bash) is the same code and more,
-acting as a reference/template for the copy-paste approach.
+[reference-sane.bash](./reference-sane.bash) is the same code,
+minus the documentation, compact, adding argument parsing,
+acting as a full reference/template for a copy-paste approach instead of sourcing.
 
 ## Usage
 
