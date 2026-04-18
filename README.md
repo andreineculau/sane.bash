@@ -21,8 +21,7 @@ acting as a full reference/template for a copy-paste approach instead of sourcin
 
 Have a look at the [example](./example) for usage and docs.
 
-There's also [example-inline](./example-inline)\
-for those times when
+There's also [example-inline](./example-inline) for those times when
 [a little copying is better than a little dependency](https://go-proverbs.github.io) .
 
 ## License
