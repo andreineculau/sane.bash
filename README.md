@@ -10,16 +10,19 @@ essentially `set -euo pipefail`.
 Except GNU Bash evolved - `errtrace` `functrace` `inherit_errexit`
 and then there's one last thing (tm): `stack trace on failure`.
 
-`sane.bash` wraps all that up in a script to import (source) or a snippet to copy-paste.
+[sane.bash](./sane.bash) wraps all that up in a script to import (source)
+or a snippet to copy-paste.
 
 ## Usage
 
-Have a look at the [./example](./example) for usage and docs.
+Have a look at the [example](./example) for usage and docs.
 
-There's also [./example-inline](./example-inline) for those times when
-[a little copying is better than a little dependency.](https://go-proverbs.github.io)
-as well as [./example-inline-full](./example-inline-full) acting as a reference/template
-for the copy-paste approach.
+There's also [example-inline](./example-inline)\
+for those times when
+[a little copying is better than a little dependency](https://go-proverbs.github.io)
+
+as well as [example-inline-full](./example-inline-full)\
+acting as a reference/template for the copy-paste approach.
 
 ## License
 
