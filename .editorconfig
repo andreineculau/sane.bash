@@ -16,11 +16,8 @@ indent_style = tab
 [README.md]
 max_line_length = none
 
-[example]
+[example*]
 indent_size = 4
 
-[example-inline]
-indent_size = 4
-
-[sane.bash]
+[*.bash]
 indent_size = 4
