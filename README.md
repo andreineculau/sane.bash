@@ -11,7 +11,9 @@ Except GNU Bash evolved - `errtrace` `functrace` `inherit_errexit`
 and then there's one last thing (tm): `stack trace on failure`.
 
 [sane.bash](./sane.bash) wraps all that up in a script to import (source)
-with inline documentation.
+or simply copy-paste since [a little copying is better than a little dependency](https://go-proverbs.github.io) .
+
+[docs-sane.bash](./docs-sane.bahs) is the same code but with inline documentation.
 
 [reference-sane.bash](./reference-sane.bash) is the same code,
 minus the documentation, compact, adding argument parsing,\
@@ -19,10 +21,7 @@ acting as a full reference/template for a copy-paste approach instead of sourcin
 
 ## Usage
 
-Have a look at the [example](./example) for usage and docs.
-
-There's also [example-inline](./example-inline) for those times when
-[a little copying is better than a little dependency](https://go-proverbs.github.io) .
+Have a look at the [example](./example) and [example-inline](./example-inline) for usage and docs.
 
 ## License
 
