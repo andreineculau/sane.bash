@@ -6,4 +6,4 @@ MARKDOWNLINT ?= $(shell command -v markdownlint)
 check:
 	$(EDITORCONFIG_CHECKER)
 	$(MARKDOWNLINT) -c markdownlint.json README.md
-	$(SHELLCHECK) example example-inline sane.bash
+	$(SHELLCHECK) example* *.bash
