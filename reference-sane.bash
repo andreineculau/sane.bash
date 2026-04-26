@@ -16,44 +16,44 @@ function exe() { printf '%s\n' "$(pwd)\$ $(printf '%q ' "$@")" >&2 && "$@"; }; e
 ##   -v, --version  Output version information and exit
 
 function on_exit() {
-  :
+    :
 }
 trap on_exit EXIT
 
 if { getopt --test >/dev/null 2>&1 && false; } || [[ "$?" = "4" ]] || false; then
-  ARGS=$(getopt -o hv -l help,version \
-    -n "$(basename "${BASH_SOURCE[0]}")" -- "$@") ||
-    {
-      grep "^##" "${0}" | cut -c 4-
-      exit 1
-    }
-  eval set -- "${ARGS}"
+    ARGS=$(getopt -o hv -l help,version \
+        -n "$(basename "${BASH_SOURCE[0]}")" -- "$@") ||
+        {
+            grep "^##" "${0}" | cut -c 4-
+            exit 1
+        }
+    eval set -- "${ARGS}"
 fi
 
 while [[ $# -gt 0 ]]; do
-  case "$1" in
-  -h | --help)
-    grep "^##" "${0}" | cut -c 4-
-    exit 0
-    ;;
-  -v | --version)
-    grep "^#-" "${0}" | cut -c 4-
-    exit 0
-    ;;
-  --)
-    shift
-    break
-    ;;
-  -*)
-    grep "^##" "${0}" | cut -c 4-
-    exit 1
-    ;;
-  *)
-    break
-    ;;
-  esac
+    case "$1" in
+    -h | --help)
+        grep "^##" "${0}" | cut -c 4-
+        exit 0
+        ;;
+    -v | --version)
+        grep "^#-" "${0}" | cut -c 4-
+        exit 0
+        ;;
+    --)
+        shift
+        break
+        ;;
+    -*)
+        grep "^##" "${0}" | cut -c 4-
+        exit 1
+        ;;
+    *)
+        break
+        ;;
+    esac
 done
 [[ $# -eq 0 ]] || {
-  grep "^##" "${0}" | cut -c 4-
-  exit 1
+    grep "^##" "${0}" | cut -c 4-
+    exit 1
 }
