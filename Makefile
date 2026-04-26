@@ -5,5 +5,5 @@ MARKDOWNLINT ?= $(shell command -v markdownlint)
 .PHONY: check
 check:
 	$(EDITORCONFIG_CHECKER)
-	$(MARKDOWNLINT) -c .markdownlint.json README.md
+	$(MARKDOWNLINT) -c .markdownlint.json *.md
 	$(SHELLCHECK) example* *.bash
